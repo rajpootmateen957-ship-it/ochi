@@ -76,17 +76,17 @@ export default function FeaturedProjects() {
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.4 }}
               >
-                {/* Background Image */}
+            
                 <img
                   src={project.image}
                   alt={project.title}
                   className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
                 />
 
-                {/* Dark Overlay */}
+              
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black/90" />
 
-                {/* Big Title Animation */}
+                
                 <div className="absolute inset-0 flex items-center justify-center px-6 text-center z-10">
                   <motion.h3
                     initial={{ opacity: 0 }}
@@ -117,7 +117,7 @@ export default function FeaturedProjects() {
                 </div>
               </motion.div>
 
-              {/* Tags BELOW the box only - with hover effect */}
+              
               <div className="flex flex-wrap gap-3 mt-5">
                 {project.tags.map((tag, i) => (
                   <motion.div
