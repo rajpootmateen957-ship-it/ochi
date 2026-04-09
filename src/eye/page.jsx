@@ -104,7 +104,7 @@ export default function ReadyToStart() {
           position: "relative",
         }}
       >
-        {/* READY row */}
+        
         <div
           style={{
             position: "relative",
@@ -114,12 +114,12 @@ export default function ReadyToStart() {
             justifyContent: "center",
           }}
         >
-          {/* READY text behind */}
+          
           <span style={{ ...textStyle, position: "absolute", zIndex: 0 }}>
             READY
           </span>
 
-          {/* Eyes on top, perfectly centered */}
+          
           <div
             style={{
               position: "relative",
@@ -136,14 +136,14 @@ export default function ReadyToStart() {
           </div>
         </div>
 
-        {/* TO START */}
+        
         <span style={{ ...textStyle, marginTop: "-4px" }}>TO START</span>
 
-        {/* THE PROJECT? */}
+        
         <span style={{ ...textStyle, marginTop: "-4px" }}>THE PROJECT?</span>
       </div>
 
-      {/* CTA Buttons */}
+      
       <div
         style={{
           display: "flex",

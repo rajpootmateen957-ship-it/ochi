@@ -74,7 +74,6 @@ export default function FeaturedProjects() {
           {projects.map((project) => (
             <div key={project.id} className="flex flex-col">
 
-              {/* Image Card */}
               <motion.div
                 onHoverStart={() => setHoveredId(project.id)}
                 onHoverEnd={() => setHoveredId(null)}
@@ -85,11 +84,11 @@ export default function FeaturedProjects() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                 />
+
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/80" />
 
-                {/* Hover Title */}
                 <div className="absolute inset-0 flex items-center justify-center px-6 text-center z-10">
                   <motion.h3
                     className="text-[#C8E64C] text-4xl sm:text-5xl md:text-[4rem] font-black tracking-[-2px] leading-none"
@@ -113,7 +112,6 @@ export default function FeaturedProjects() {
                 </div>
               </motion.div>
 
-              {/* Tags */}
               <div className="flex flex-wrap gap-3 mt-6">
                 {project.tags.map((tag, i) => (
                   <motion.button

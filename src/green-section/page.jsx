@@ -23,7 +23,7 @@ const FontLoader = () => (
   `}</style>
 );
 
-/* ─── 1. Green Marquee Section - Advanced Floating + Scroll Influence ───── */
+
 function MarqueeSection() {
   const ref = useRef(null);
 
@@ -32,7 +32,7 @@ function MarqueeSection() {
     offset: ["start end", "end start"],
   });
 
-  // Gentle floating combined with subtle scroll effect
+  
   const scrollY = useTransform(scrollYProgress, [0, 1], [0, -25]);
 
   return (
@@ -40,7 +40,7 @@ function MarqueeSection() {
       ref={ref}
       style={{ y: scrollY }}
       animate={{
-        y: [0, -35, 0],           // Smooth up and down floating
+        y: [0, -35, 0],           
       }}
       transition={{
         duration: 7.5,
@@ -83,7 +83,7 @@ function MarqueeSection() {
   );
 }
 
-/* ─── 2. Lime About Section - Strong Overlap + Coordinated Scroll Animation ─ */
+
 function AboutSection() {
   const ref = useRef(null);
 
@@ -92,10 +92,10 @@ function AboutSection() {
     offset: ["start end", "end start"],
   });
 
-  // Coordinated movement for perfect overlap feel
+  
   const sectionY = useTransform(scrollYProgress, [0, 1], [-70, 45]);
 
-  // Parallax for the image
+  
   const imageY = useTransform(scrollYProgress, [0, 1], [100, -80]);
 
   return (
@@ -110,7 +110,7 @@ function AboutSection() {
         borderTop: "1px solid rgba(0,0,0,0.12)",
       }}
     >
-      {/* Big Heading */}
+    
       <h2
         style={{
           fontFamily: "'Inter', sans-serif",
@@ -129,10 +129,10 @@ function AboutSection() {
         <span style={{ textDecoration: "underline", textUnderlineOffset: "8px" }}>market leadership</span>.
       </h2>
 
-      {/* Divider */}
+     
       <div style={{ borderTop: "1px solid rgba(0,0,0,0.18)", marginBottom: "clamp(45px, 7vw, 80px)" }} />
 
-      {/* Expect Grid */}
+      
       <div
         style={{
           display: "grid",
@@ -178,13 +178,13 @@ function AboutSection() {
         </div>
       </div>
 
-      {/* How we can help + Image */}
+     
       <div
         style={{
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
           gap: "clamp(40px, 6vw, 80px)",
-          alignItems: "start", // Changed from 'end' to 'start' for better alignment
+          alignItems: "start", 
         }}
       >
         <div>
@@ -229,7 +229,7 @@ function AboutSection() {
           </button>
         </div>
 
-        {/* Image with Parallax - FIXED */}
+     
         <motion.div style={{ y: imageY }}>
           <div
             style={{
@@ -246,7 +246,7 @@ function AboutSection() {
               alt="Ochi creative showcase"
               style={{
                 width: "100%",
-                height: "auto", // Changed from 100% to auto to show full image
+                height: "auto", 
                 objectFit: "cover",
                 display: "block",
               }}
@@ -258,7 +258,7 @@ function AboutSection() {
   );
 }
 
-/* ─── Main Export ────────────────────────────────── */
+
 export default function Page() {
   return (
     <>

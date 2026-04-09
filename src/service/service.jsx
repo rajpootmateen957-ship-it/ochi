@@ -67,7 +67,6 @@ const FontLoader = () => (
   `}</style>
 );
 
-// ─── Loader ────────────────────────────────────────────────────────────────
 function LoaderScreen({ onComplete }) {
   const [progress, setProgress] = useState(0);
 
@@ -120,7 +119,7 @@ function LoaderScreen({ onComplete }) {
           overflow: "hidden",
         }}
       >
-        {/* Logo */}
+      
         <div
           style={{
             fontFamily: "'Inter', sans-serif",
@@ -147,7 +146,6 @@ function LoaderScreen({ onComplete }) {
           />
         </div>
 
-        {/* Headline */}
         <div
           style={{
             fontFamily: "'Barlow Condensed', sans-serif",
@@ -176,7 +174,7 @@ function LoaderScreen({ onComplete }) {
           ))}
         </div>
 
-        {/* Footer row */}
+      
         <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between" }}>
           <span style={{ fontSize: 13, color: "#888", fontFamily: "'Inter', sans-serif" }}>
             Loading:
@@ -194,7 +192,7 @@ function LoaderScreen({ onComplete }) {
           </span>
         </div>
 
-        {/* Progress bar */}
+       
         <div
           style={{
             position: "absolute",
@@ -212,7 +210,7 @@ function LoaderScreen({ onComplete }) {
   );
 }
 
-// ─── Navbar ────────────────────────────────────────────────────────────────
+
 function Navbar({ animate }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const links = ["Services", "Our work", "About us", "Insights"];
@@ -228,7 +226,7 @@ function Navbar({ animate }) {
           borderBottom: "1px solid rgba(0,0,0,0.06)",
         }}
       >
-        {/* Logo — left */}
+       
         <motion.div
           initial={{ opacity: 0, y: -12 }}
           animate={animate ? { opacity: 1, y: 0 } : {}}
@@ -258,7 +256,7 @@ function Navbar({ animate }) {
           />
         </motion.div>
 
-        {/* Links — center */}
+      
         <div className="nav-center">
           {links.map((link, i) => (
             <motion.a
@@ -280,7 +278,7 @@ function Navbar({ animate }) {
           ))}
         </div>
 
-        {/* Contact — right */}
+       
         <div className="nav-right">
           <motion.a
             href="#"
@@ -299,7 +297,7 @@ function Navbar({ animate }) {
           </motion.a>
         </div>
 
-        {/* Hamburger — mobile only */}
+        
         <motion.div
           className="hamburger"
           initial={{ opacity: 0 }}
@@ -313,7 +311,7 @@ function Navbar({ animate }) {
         </motion.div>
       </nav>
 
-      {/* Mobile dropdown */}
+     
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
         {links.map((link) => (
           <a key={link} href="#">{link}</a>
@@ -324,7 +322,7 @@ function Navbar({ animate }) {
   );
 }
 
-// ─── Hero ──────────────────────────────────────────────────────────────────
+
 function HeroSection({ animate }) {
   const lines = ["WE CREATE", "EYE-OPENING", "PRESENTATIONS"];
 
@@ -410,7 +408,7 @@ function HeroSection({ animate }) {
         ))}
       </h1>
 
-      {/* Sub row */}
+      
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         animate={animate ? { opacity: 1, y: 0 } : {}}
@@ -457,7 +455,7 @@ function HeroSection({ animate }) {
   );
 }
 
-// ─── Main Export ───────────────────────────────────────────────────────────
+
 export default function Services() {
   const [loaded, setLoaded] = useState(false);
 

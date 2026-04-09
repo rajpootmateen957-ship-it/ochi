@@ -23,7 +23,7 @@ export default function Footer() {
   return (
     <div style={{ position: "relative" }}>
 
-      {/* ── Sticky green placeholder — sticks while footer scrolls over it ── */}
+      
       <div
         style={{
           position: "sticky",
@@ -35,7 +35,7 @@ export default function Footer() {
         }}
       />
 
-      {/* ── Footer — scrolls over sticky green section ── */}
+    
       <div
         style={{
           position: "relative",
@@ -46,7 +46,7 @@ export default function Footer() {
           marginTop: "-100vh",
         }}
       >
-        {/* EYE-OPENING  PRESENTATIONS */}
+       
         <div
           style={{
             display: "grid",
@@ -86,7 +86,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Divider */}
+       
         <div
           style={{
             width: "100%",
@@ -96,7 +96,7 @@ export default function Footer() {
           }}
         />
 
-        {/* Footer columns */}
+      
         <div
           style={{
             display: "grid",
@@ -105,7 +105,7 @@ export default function Footer() {
             marginBottom: "80px",
           }}
         >
-          {/* S: Socials */}
+        
           <div>
             <span style={labelStyle}>S:</span>
             {["Instagram", "Behance", "Facebook", "Linkedin"].map((s) => (
@@ -115,7 +115,7 @@ export default function Footer() {
             ))}
           </div>
 
-          {/* L: Location */}
+       
           <div>
             <span style={labelStyle}>L:</span>
             <a href="#" style={linkStyle}>202-1965 W 4th Ave</a>
@@ -125,7 +125,7 @@ export default function Footer() {
             <a href="#" style={linkStyle}>Lviv, Ukraine</a>
           </div>
 
-          {/* E: Email */}
+          
           <div>
             <span style={labelStyle}>E:</span>
             <a href="mailto:hello@ochi.design" style={linkStyle}>
@@ -144,7 +144,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
+      
         <div
           style={{
             display: "flex",

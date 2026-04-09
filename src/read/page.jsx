@@ -1,12 +1,22 @@
 "use client";
 import { useState } from "react";
+import ochi11 from "../../src/assets/ochi-11.png";
+import ochi12 from "../../src/assets/ochi-12.png";
+import ochi13 from "../../src/assets/ochi-13.png";
+import ochi14 from "../../src/assets/ochi-14.png";  
+import ochi15 from "../../src/assets/ochi-15.png";
+import ochi16 from "../../src/assets/ochi-16.png";
+import ochi17 from "../../src/assets/ochi-17.png";
+import ochi18 from "../../src/assets/ochi-18.png";
+import ochi19 from "../../src/assets/ochi-19.png";
+import ochi20 from "../../src/assets/ochi-20.png";  
 
 const reviews = [
   {
     company: "Karman Ventures",
     reviewer: "William Barnes",
     services: ["INVESTOR DECK", "SALES DECK"],
-    avatar: "/avatars/william.jpg",
+    avatar: ochi11,
     review:
       "They were transparent about the time and the stages of the project. The end product is high quality, and I feel confident about how they were handholding the client through the process. I feel like I can introduce them to someone who needs to put a sales deck together from scratch, and they would be able to handhold the client experience from 0 to 100 very effectively from story to design. 5/5",
   },
@@ -14,7 +24,7 @@ const reviews = [
     company: "Medallia",
     reviewer: "Becky Chastain",
     services: ["SALES DECK", "INVESTOR DECK"],
-    avatar: "/avatars/becky.jpg",
+    avatar: ochi12,
     review:
       "An exceptional team that delivered beyond expectations. Their attention to detail and creative approach made our presentation stand out. Highly recommend for any deck work. 5/5",
   },
@@ -22,7 +32,7 @@ const reviews = [
     company: "Planetly",
     reviewer: "Nina Walloch",
     services: ["AGENCY", "BIG NEWS DECK", "BRANDED TEMPLATE", "INVESTOR DECK", "PRODUCT PRESENTATION", "SALES DECK", "STARTUP PITCH"],
-    avatar: "/avatars/nina.jpg",
+    avatar: ochi13,
     review:
       "Ihor and his team tackled the projects with great professionalism and creativity. They understood our brand value and turned this into excellent slide designs. The process was seamless and very effective, so we decided to roll this out across all our presentation decks. Furthermore, their understanding, professionalism, and creativity have secured a continued partnership.",
   },
@@ -30,7 +40,7 @@ const reviews = [
     company: "Workiz Easy",
     reviewer: "Tomer Levy",
     services: ["SALES DECK"],
-    avatar: "/avatars/tomer.jpg",
+    avatar: ochi14,
     review:
       "Great experience working with this team. They delivered a polished, professional deck on time and were very responsive throughout. 5/5",
   },
@@ -38,7 +48,7 @@ const reviews = [
     company: "Premium Blend",
     reviewer: "Ellen Kim",
     services: ["BRANDED TEMPLATE", "SALES DECK"],
-    avatar: "/avatars/ellen.jpg",
+    avatar: ochi15,
     review:
       "Outstanding work on our branded presentation template. The team was professional, creative, and a pleasure to work with. 5/5",
   },
@@ -46,7 +56,7 @@ const reviews = [
     company: "Hypercare Systems",
     reviewer: "Brendan Goss",
     services: ["INVESTOR DECK"],
-    avatar: "/avatars/brendan.jpg",
+    avatar: ochi16,
     review:
       "They nailed our investor deck on the first try. Clear communication, fast turnaround, and a beautiful final product. 5/5",
   },
@@ -54,7 +64,7 @@ const reviews = [
     company: "Officevibe",
     reviewer: "Raff Labrie",
     services: ["SALES DECK", "PRODUCT PRESENTATION"],
-    avatar: "/avatars/raff.jpg",
+    avatar: ochi17,
     review:
       "The team was incredibly collaborative and brought fresh ideas to the table. Our sales deck has never looked better. 5/5",
   },
@@ -62,7 +72,7 @@ const reviews = [
     company: "Orderlion",
     reviewer: "Stefan Strohmer",
     services: ["STARTUP PITCH", "INVESTOR DECK"],
-    avatar: "/avatars/stefan.jpg",
+    avatar: ochi18,
     review:
       "From story to design, everything was handled with care and expertise. We felt supported every step of the way. 5/5",
   },
@@ -70,7 +80,7 @@ const reviews = [
     company: "Black Book",
     reviewer: "Jaci Smith",
     services: ["BRANDED TEMPLATE"],
-    avatar: "/avatars/jaci.jpg",
+    avatar: ochi19,
     review:
       "Phenomenal quality and a smooth process. Our branded template is exactly what we envisioned. 5/5",
   },
@@ -78,7 +88,7 @@ const reviews = [
     company: "Trawa Energy",
     reviewer: "David Budde",
     services: ["INVESTOR DECK", "STARTUP PITCH"],
-    avatar: "/avatars/david.jpg",
+    avatar: ochi20,
     review:
       "Professional, creative, and on time. The investor deck they built for us was instrumental in our fundraising success. 5/5",
   },
@@ -90,113 +100,56 @@ export default function Reviews() {
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <section
-      style={{
-        backgroundColor: "#eaeae7",
-        minHeight: "100vh",
-        padding: "56px 48px 80px 48px",
-        fontFamily: "'Inter', sans-serif",
-      }}
-    >
-      {/* Heading */}
-      <h1
-        style={{
-          fontSize: "52px",
-          fontWeight: "400",
-          color: "#1a1a1a",
-          margin: "0 0 40px 0",
-          letterSpacing: "-0.5px",
-          lineHeight: 1.1,
-        }}
-      >
+    <section className="bg-[#eaeae7] min-h-screen py-14 px-12 font-[Inter]">
+      
+      <h1 className="text-[52px] font-normal text-[#1a1a1a] mb-10 tracking-[-0.5px] leading-[1.1]">
         Clients&apos; reviews
       </h1>
 
-      {/* Top divider */}
-      <div style={{ width: "100%", height: "1px", backgroundColor: "#c8c5be" }} />
+      <div className="w-full h-[1px] bg-[#c8c5be]" />
 
-      {/* Rows */}
       {reviews.map((r, i) => (
         <div key={i}>
-          {/* Collapsed row — always visible */}
+          
           <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr auto",
-              alignItems: "center",
-              padding: "22px 0",
-              cursor: "pointer",
-            }}
+            className="grid grid-cols-[1fr_1fr_auto] items-center py-[22px] cursor-pointer"
             onClick={() => toggle(i)}
           >
-            {/* Company */}
-            <span
-              style={{
-                fontSize: "15px",
-                color: "#1a1a1a",
-                textDecoration: "underline",
-                textUnderlineOffset: "3px",
-              }}
-            >
+            
+            <span className="text-[15px] text-[#1a1a1a] underline underline-offset-[3px]">
               {r.company}
             </span>
 
-            {/* Reviewer */}
-            <span style={{ fontSize: "15px", color: "#1a1a1a" }}>
+            <span className="text-[15px] text-[#1a1a1a]">
               {r.reviewer}
             </span>
 
-            {/* READ */}
             <span
-              style={{
-                fontSize: "13px",
-                color: openIndex === i ? "#1a1a1a" : "#9e9b94",
-                letterSpacing: "0.08em",
-                fontWeight: openIndex === i ? "500" : "400",
-                textDecoration: openIndex === i ? "underline" : "none",
-                textUnderlineOffset: "3px",
-                userSelect: "none",
-              }}
+              className={`text-[13px] tracking-[0.08em] ${
+                openIndex === i
+                  ? "text-[#1a1a1a] font-medium underline underline-offset-[3px]"
+                  : "text-[#9e9b94]"
+              } select-none`}
             >
               READ
             </span>
           </div>
 
-          {/* Expanded content */}
           {openIndex === i && (
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr 1fr",
-                gap: "0 24px",
-                paddingBottom: "40px",
-              }}
-            >
-              {/* Col 1 — empty (company already shown above) */}
+            <div className="grid grid-cols-3 gap-x-6 pb-10">
+              
               <div />
 
-              {/* Col 2 — Services */}
-              <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
-                <p style={{ fontSize: "15px", color: "#1a1a1a", margin: "0 0 16px 0" }}>
+              <div className="flex flex-col">
+                <p className="text-[15px] text-[#1a1a1a] mb-4">
                   Services:
                 </p>
-                <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+
+                <div className="flex flex-col gap-[10px]">
                   {r.services.map((s, j) => (
                     <span
                       key={j}
-                      style={{
-                        display: "inline-flex",
-                        width: "fit-content",
-                        alignItems: "center",
-                        padding: "7px 18px",
-                        borderRadius: "999px",
-                        border: "1px solid #1a1a1a",
-                        fontSize: "12px",
-                        letterSpacing: "0.07em",
-                        color: "#1a1a1a",
-                        fontWeight: "500",
-                        whiteSpace: "nowrap",
-                      }}
+                      className="inline-flex w-fit items-center px-[18px] py-[7px] rounded-full border border-[#1a1a1a] text-[12px] tracking-[0.07em] text-[#1a1a1a] font-medium whitespace-nowrap"
                     >
                       {s}
                     </span>
@@ -204,45 +157,25 @@ export default function Reviews() {
                 </div>
               </div>
 
-              {/* Col 3 — Avatar + Review */}
-              <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-                {/* Avatar */}
-                <div
-                  style={{
-                    width: "90px",
-                    height: "90px",
-                    borderRadius: "12px",
-                    backgroundColor: "#d4d1ca",
-                    overflow: "hidden",
-                    flexShrink: 0,
-                  }}
-                >
+              <div className="flex flex-col gap-4">
+                
+                <div className="w-[90px] h-[90px] rounded-[12px] bg-[#d4d1ca] overflow-hidden shrink-0">
                   <img
                     src={r.avatar}
                     alt={r.reviewer}
-                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                    className="w-full h-full object-cover block scale-110 transition-transform duration-300"
                     onError={(e) => { e.currentTarget.style.display = "none"; }}
                   />
                 </div>
 
-                {/* Review text */}
-                <p
-                  style={{
-                    fontSize: "15px",
-                    color: "#1a1a1a",
-                    lineHeight: "1.65",
-                    margin: "0",
-                    maxWidth: "420px",
-                  }}
-                >
+                <p className="text-[15px] text-[#1a1a1a] leading-[1.65] max-w-[420px]">
                   {r.review}
                 </p>
               </div>
             </div>
           )}
 
-          {/* Row divider */}
-          <div style={{ width: "100%", height: "1px", backgroundColor: "#c8c5be" }} />
+          <div className="w-full h-[1px] bg-[#c8c5be]" />
         </div>
       ))}
     </section>

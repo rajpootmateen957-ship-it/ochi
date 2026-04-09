@@ -12,17 +12,17 @@ export default function ClientsReviews() {
       {/* Top divider */}
       <div style={{ width: "100%", height: "1px", backgroundColor: "#c8c5be" }} />
 
-      {/* Row */}
+      
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr auto", gap: "0 24px", padding: "32px 0", borderBottom: "1px solid #c8c5be", alignItems: "start" }}>
 
-        {/* Col 1 — Company */}
+        
         <div>
           <span style={{ fontSize: "15px", color: "#1a1a1a", textDecoration: "underline", textUnderlineOffset: "3px", cursor: "pointer" }}>
             Karman Ventures
           </span>
         </div>
 
-        {/* Col 2 — Services */}
+        
         <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
           <p style={{ fontSize: "15px", color: "#1a1a1a", margin: "0 0 20px 0" }}>Services:</p>
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
@@ -57,11 +57,11 @@ export default function ClientsReviews() {
           </div>
         </div>
 
-        {/* Col 3 — Reviewer */}
+        
         <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
           <p style={{ fontSize: "15px", color: "#1a1a1a", margin: "0" }}>William Barnes</p>
 
-          {/* Avatar */}
+          
           <div style={{
             width: "90px",
             height: "90px",
@@ -78,7 +78,7 @@ export default function ClientsReviews() {
             />
           </div>
 
-          {/* Review */}
+        
           <p style={{
             fontSize: "15px",
             color: "#1a1a1a",
@@ -90,7 +90,7 @@ export default function ClientsReviews() {
           </p>
         </div>
 
-        {/* Col 4 — Read */}
+        
         <div>
           <span style={{
             fontSize: "13px",

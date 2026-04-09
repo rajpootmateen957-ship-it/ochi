@@ -5,7 +5,7 @@ export default function BadgeCards() {
     <section style={{ width: "100%", backgroundColor: "#e8e8e5", padding: "60px 48px", display: "flex", alignItems: "center", justifyContent: "center" }}>
       <div style={{ width: "100%", maxWidth: "1100px", display: "grid", gridTemplateColumns: "1.8fr 1fr 1fr", gap: "16px", alignItems: "stretch" }}>
 
-        {/* Card 1 — ochi green — LANDSCAPE */}
+        
         <div style={{
           backgroundColor: "#1a5c47",
           borderRadius: "20px",
@@ -15,7 +15,7 @@ export default function BadgeCards() {
           justifyContent: "space-between",
           minHeight: "340px",
         }}>
-          {/* Logo centered */}
+          
           <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center" }}>
             <span style={{
               fontSize: "80px",
@@ -29,7 +29,7 @@ export default function BadgeCards() {
             </span>
           </div>
 
-          {/* Bottom pill */}
+         
           <div>
             <span style={{
               display: "inline-flex",
@@ -47,7 +47,7 @@ export default function BadgeCards() {
           </div>
         </div>
 
-        {/* Card 2 — Clutch — PORTRAIT */}
+       
         <div style={{
           backgroundColor: "#222222",
           borderRadius: "20px",
@@ -57,7 +57,7 @@ export default function BadgeCards() {
           justifyContent: "space-between",
           minHeight: "340px",
         }}>
-          {/* Clutch + stars centered */}
+        
           <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "16px" }}>
             <span style={{
               fontSize: "58px",
@@ -78,7 +78,7 @@ export default function BadgeCards() {
             </div>
           </div>
 
-          {/* Bottom pill */}
+          
           <div>
             <span style={{
               display: "inline-flex",
@@ -98,7 +98,7 @@ export default function BadgeCards() {
           </div>
         </div>
 
-        {/* Card 3 — Futur Academy — PORTRAIT */}
+       
         <div style={{
           backgroundColor: "#222222",
           borderRadius: "20px",
@@ -108,10 +108,10 @@ export default function BadgeCards() {
           justifyContent: "space-between",
           minHeight: "340px",
         }}>
-          {/* Badge centered */}
+      
           <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center" }}>
             <svg width="150" height="150" viewBox="0 0 160 160">
-              {/* Ray spikes outer */}
+             
               {[...Array(48)].map((_, i) => {
                 const angle = (i * 360) / 48;
                 const rad = (angle * Math.PI) / 180;
@@ -121,21 +121,21 @@ export default function BadgeCards() {
                 const y2 = 80 + 74 * Math.sin(rad);
                 return <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="white" strokeWidth="1.2" opacity="0.8" />;
               })}
-              {/* Outer ring */}
+              
               <circle cx="80" cy="80" r="60" fill="none" stroke="white" strokeWidth="1" opacity="0.6" />
-              {/* Inner ring */}
+              
               <circle cx="80" cy="80" r="44" fill="none" stroke="white" strokeWidth="1" opacity="0.5" />
 
-              {/* Shield / A icon */}
+              
               <text x="80" y="88" textAnchor="middle" fill="white" fontSize="24" fontWeight="700" fontFamily="serif">A</text>
 
-              {/* Top arc text — THE FUTUR ACADEMY */}
+              
               <path id="topArc2" d="M 26,80 A 54,54 0 0,1 134,80" fill="none" />
               <text fontSize="7.5" fill="white" letterSpacing="2.5" fontFamily="sans-serif" fontWeight="500">
                 <textPath href="#topArc2" startOffset="8%">THE FUTUR ACADEMY</textPath>
               </text>
 
-              {/* Bottom arc text — CALIFORNIA */}
+            
               <path id="botArc2" d="M 34,88 A 48,48 0 0,0 126,88" fill="none" />
               <text fontSize="6.5" fill="white" letterSpacing="3" fontFamily="sans-serif">
                 <textPath href="#botArc2" startOffset="18%">CALIFORNIA</textPath>
@@ -143,7 +143,7 @@ export default function BadgeCards() {
             </svg>
           </div>
 
-          {/* Bottom pill — two lines */}
+          
           <div>
             <span style={{
               display: "inline-flex",
