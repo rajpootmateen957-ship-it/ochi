@@ -1,11 +1,12 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import ochi10 from "../../src/assets/ochi-10.png";
 
-/* ─── Fonts ─────────────────────────────────────────────────────────────── */
+/* ─── Fonts ───────────────────── */
 const FontLoader = () => (
   <style>{`
     @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@300;400;500&display=swap');
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after { box-sizing: border-box; margin: 3px; padding: 0; }
     body { background: #f0ede8; font-family: 'Inter', sans-serif; overflow-x: hidden; }
 
     /* Marquee Animation */
@@ -32,12 +33,12 @@ function MarqueeSection() {
   });
 
   // Gentle floating combined with subtle scroll effect
-  const y = useTransform(scrollYProgress, [0, 1], [0, -25]);
+  const scrollY = useTransform(scrollYProgress, [0, 1], [0, -25]);
 
   return (
     <motion.section
       ref={ref}
-      style={{ y }}
+      style={{ y: scrollY }}
       animate={{
         y: [0, -35, 0],           // Smooth up and down floating
       }}
@@ -100,12 +101,12 @@ function AboutSection() {
   return (
     <motion.section
       ref={ref}
-      style={{ y: sectionY }}
       className="relative z-0"
       style={{
+        y: sectionY,
         background: "#c8e64c",
         padding: "clamp(70px, 9vw, 120px) clamp(24px, 7vw, 90px)",
-        marginTop: "-85px",           // Strong visual overlap
+        marginTop: "-85px",
         borderTop: "1px solid rgba(0,0,0,0.12)",
       }}
     >
@@ -183,7 +184,7 @@ function AboutSection() {
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
           gap: "clamp(40px, 6vw, 80px)",
-          alignItems: "end",
+          alignItems: "start", // Changed from 'end' to 'start' for better alignment
         }}
       >
         <div>
@@ -228,50 +229,36 @@ function AboutSection() {
           </button>
         </div>
 
-        {/* Image with Parallax */}
-        <div style={{ overflow: "hidden", borderRadius: 24 }}>
-          <motion.div style={{ y: imageY }}>
-            <div
+        {/* Image with Parallax - FIXED */}
+        <motion.div style={{ y: imageY }}>
+          <div
+            style={{
+              width: "100%",
+              borderRadius: 24,
+              position: "relative",
+              overflow: "hidden",
+              boxShadow: "0 30px 80px rgba(0,0,0,0.18)",
+              lineHeight: 0, // Removes extra space below image
+            }}
+          >
+            <img
+              src={ochi10}
+              alt="Ochi creative showcase"
               style={{
                 width: "100%",
-                aspectRatio: "16 / 9",
-                background: "#b0b0a8",
-                borderRadius: 24,
-                position: "relative",
-                overflow: "hidden",
+                height: "auto", // Changed from 100% to auto to show full image
+                objectFit: "cover",
+                display: "block",
               }}
-            >
-              {/* Placeholder team image */}
-              <div
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  background: "linear-gradient(160deg, #c8c8be 0%, #9a9a90 100%)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <div style={{ display: "flex", gap: 20, alignItems: "flex-end" }}>
-                  <div style={{ textAlign: "center" }}>
-                    <div style={{ width: 68, height: 68, borderRadius: "50%", background: "#1a1a1a", opacity: 0.75 }} />
-                    <div style={{ width: 92, height: 135, background: "#1a1a1a", opacity: 0.75, borderRadius: "12px 12px 0 0", marginTop: -12 }} />
-                  </div>
-                  <div style={{ textAlign: "center" }}>
-                    <div style={{ width: 62, height: 62, borderRadius: "50%", background: "#1a1a1a", opacity: 0.68 }} />
-                    <div style={{ width: 98, height: 122, background: "#1a1a1a", opacity: 0.68, borderRadius: "12px 12px 0 0", marginTop: -12 }} />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
+            />
+          </div>
+        </motion.div>
       </div>
     </motion.section>
   );
 }
 
-/* ─── Main Export ───────────────────────────────────────────────────────── */
+/* ─── Main Export ────────────────────────────────── */
 export default function Page() {
   return (
     <>
