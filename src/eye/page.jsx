@@ -226,5 +226,5 @@ export default function ReadyToStart() {
         </button>
       </div>
     </section>
-  );
+  );     
 }

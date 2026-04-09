@@ -8,7 +8,7 @@ const FontLoader = () => (
     @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@300;400;500&display=swap');
     *, *::before, *::after { box-sizing: border-box; margin: 3px; padding: 0; }
     body { background: #f0ede8; font-family: 'Inter', sans-serif; overflow-x: hidden; }
-
+   
     /* Marquee Animation */
     @keyframes marquee {
       0% { transform: translateX(0); }

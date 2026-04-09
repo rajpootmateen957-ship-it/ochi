@@ -6,7 +6,7 @@ export default function EyeSection() {
   const pupil2Ref = useRef(null);
   const eye1Ref = useRef(null);
   const eye2Ref = useRef(null);
-
+     
   useEffect(() => {
     const pairs = [
       { pupil: pupil1Ref.current, eye: eye1Ref.current },

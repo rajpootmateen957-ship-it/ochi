@@ -66,7 +66,7 @@ const reviews = [
     review:
       "From story to design, everything was handled with care and expertise. We felt supported every step of the way. 5/5",
   },
-  {
+  {  
     company: "Black Book",
     reviewer: "Jaci Smith",
     services: ["BRANDED TEMPLATE"],
