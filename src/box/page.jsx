@@ -59,7 +59,7 @@ export default function FeaturedProjects() {
   const [hoveredTag, setHoveredTag] = useState(null);
 
   return (
-    <section className="py-20 bg-[#f5f5f5]">
+    <section className="py-20 bg-[#f5f5f5]">            
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-6xl md:text-7xl font-bold tracking-tighter mb-12 text-black">
           Featured projects
