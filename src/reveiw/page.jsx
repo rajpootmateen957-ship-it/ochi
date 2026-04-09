@@ -1,3 +1,5 @@
+import ochi11 from "../../src/assets/ochi-11.png";
+
 export default function ClientsReviews() {
   return (
     <section style={{ backgroundColor: "#ebebе8", minHeight: "100vh", padding: "56px 48px 0 48px", fontFamily: "sans-serif" }}>
@@ -69,7 +71,7 @@ export default function ClientsReviews() {
             flexShrink: 0
           }}>
             <img
-              src="/avatar.jpg"
+              src={ochi11}
               alt="William Barnes"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               onError={(e) => { e.currentTarget.style.display = "none"; }}
